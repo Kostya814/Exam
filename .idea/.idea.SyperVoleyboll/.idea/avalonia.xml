@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="SyperVoleyboll/AddPlayer.axaml" value="SyperVoleyboll/SyperVoleyboll.csproj" />
+        <entry key="SyperVoleyboll/MainWindow.axaml" value="SyperVoleyboll/SyperVoleyboll.csproj" />
+        <entry key="SyperVoleyboll/ProfileAdmin.axaml" value="SyperVoleyboll/SyperVoleyboll.csproj" />
+        <entry key="SyperVoleyboll/ProfileManadger.axaml" value="SyperVoleyboll/SyperVoleyboll.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

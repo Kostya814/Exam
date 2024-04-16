@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:database="clr-namespace:SyperVoleyboll.Database"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SyperVoleyboll.ProfileManadger"
+        Title="ProfileManadger">
+        <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                        <TextBox Name="Search" TextChanged="SearchPlayer"></TextBox>
+                        <ComboBox Name="Filter" SelectionChanged="FilterPosition"></ComboBox>
+                </StackPanel>
+                <StackPanel >
+                <ListBox 
+                Name="ListBoxGames">
+                <ListBox.DataTemplates>
+                        <DataTemplate x:DataType="database:GamePlayer">
+                                <StackPanel 
+                                        Orientation="Horizontal">
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Имя игрока</TextBlock>
+                                                <TextBlock Text="{Binding Player.Name}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Позиция</TextBlock>
+                                                <TextBlock Text="{Binding Player.Position}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Вес</TextBlock> 
+                                                <TextBlock Text="{Binding Player.Weight}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Рост</TextBlock>
+                                                <TextBlock Text="{Binding Player.Heihgt}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Дата рождения</TextBlock>
+                                                <TextBlock Text="{Binding Player.BithDay,StringFormat=dd-mm-yyyy}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Дата начала игры</TextBlock>
+                                                <TextBlock Text="{Binding Game.BeginDate,StringFormat=dd-mm-yyyy}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                                <TextBlock>Команда</TextBlock>
+                                                <TextBlock Text="{Binding Player.Team.Name}"></TextBlock>
+                                        </StackPanel>
+                                </StackPanel>
+                        </DataTemplate>
+                </ListBox.DataTemplates>
+                        </ListBox>
+                </StackPanel>
+                <Button Click="CreatePlayer">Добавить игрока</Button>
+        </StackPanel>
+</Window>

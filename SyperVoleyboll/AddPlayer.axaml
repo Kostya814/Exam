@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SyperVoleyboll.AddPlayer"
+        Title="AddPlayer">
+    <StackPanel
+        Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Имя игрока</TextBlock>
+            <TextBox Name="tbName"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Имя команды</TextBlock>
+            <TextBox Name="cbTeam"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Дата рождения</TextBlock>
+            <DatePicker Name="dp"></DatePicker>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Позиция</TextBlock>
+            <TextBox Name="tbPosition"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Вес</TextBlock>
+            <TextBox Name="tbWeight"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Рост</TextBlock>
+            <TextBox Name="tbHeihgt"></TextBox>
+        </StackPanel>
+        <Button Click="Create">Добавить запись</Button>
+    </StackPanel>
+</Window>
